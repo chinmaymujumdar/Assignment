@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioButton
+                android:id="@+id/less"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:text="Less than ="
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:textColor="@drawable/radio_flat_text_selector" />
+
+        <RadioButton
+                android:id="@+id/greater"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:text="Greater than ="
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="5dp"
+                android:textColor="@drawable/radio_flat_text_selector" />
+
+    </RadioGroup>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/comparison_value"
+            app:layout_constraintTop_toBottomOf="@id/radio_group"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="Enter value"
+            android:inputType="number"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="#000000"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

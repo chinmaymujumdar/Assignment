@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="#e6e6e6"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:padding="10dp">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filter_txt"
+            android:text="Total cases 10"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:textSize="15dp"
+            android:textColor="#000000"
+    />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clear"
+            android:src="@drawable/clear"
+            android:padding="5dp"
+    />
+
+
+</LinearLayout>

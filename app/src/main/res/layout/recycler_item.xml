@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="data" type="com.example.carwaleassignment.model.Country"/>
+        <variable name="position" type="Integer"/>
+        <variable name="viewModel" type="com.example.carwaleassignment.viewmodel.CasesViewModel"/>
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_marginTop="5dp"
+        android:padding="10dp">
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/country_txt"
+            android:text="@{data.country.toString()}"
+            android:gravity="center"
+            android:textColor="#000000"
+            app:isBold="@{position}"
+            app:code="@{data.countryCode}"
+            app:data="@{viewModel}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/total_country_txt"
+    />
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_country_txt"
+            android:text="@{data.totalConfirmed.toString()}"
+            android:gravity="center"
+            android:textColor="#000000"
+            app:isBold="@{position}"
+            app:code="@{data.countryCode}"
+            app:data="@{viewModel}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/country_txt"
+            app:layout_constraintEnd_toStartOf="@id/death_country_txt"
+    />
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/death_country_txt"
+            android:text="@{data.totalDeaths.toString()}"
+            android:gravity="center"
+            android:textColor="#000000"
+            app:isBold="@{position}"
+            app:code="@{data.countryCode}"
+            app:data="@{viewModel}"
+            app:layout_constraintStart_toEndOf="@id/total_country_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/recovered_country_txt"
+    />
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/recovered_country_txt"
+            android:text="@{data.totalRecovered.toString()}"
+            android:gravity="center"
+            android:textColor="#000000"
+            app:isBold="@{position}"
+            app:code="@{data.countryCode}"
+            app:data="@{viewModel}"
+            app:layout_constraintStart_toEndOf="@id/death_country_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
